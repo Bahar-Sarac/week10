@@ -1,0 +1,37 @@
+
+import java.util.Scanner;
+
+public class dizileridiziyeyerlestirme {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Eleman sayısı giriniz: ");
+        int n = input.nextInt();
+        int[] A = new int[n];
+        int[] B = new int[n];
+        int[] C = new int[n];
+        
+        for (int i = 0; i < n; i++) {
+            System.out.print("A dizisi: ");
+            A[i] = input.nextInt();
+        }
+        
+        int x = 0, y = 0;
+        for (int i = 0; i < n; i++) {
+            if (A[i] == 0) {
+            }
+            if (A[i] > 0) {
+                x++;
+                System.out.print("B dizisi: " + B[i]);
+                B[i] = input.nextInt();
+            } else {
+                y++;
+            }
+
+            C[y] = A[i];
+            System.out.println("C dizisi: " + C[y]);
+        }
+    }
+
+}
