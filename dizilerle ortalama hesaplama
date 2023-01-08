@@ -1,0 +1,35 @@
+import static java.awt.PageAttributes.MediaType.A;
+import java.util.Scanner;
+
+public class dizi_orthesaplama {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Eleman sayısı giriniz: ");
+        int n = input.nextInt();
+        int[] A = new int[n];
+
+        for (int i = 0; i < A.length; i++) {
+            System.out.print("A dizisi: ");
+            A[i] = input.nextInt();
+        }
+        int t1 = 0, k = 1, ht = 0, t2 = 0;
+        for (int i = 0; i < n; i++) {
+            t1 += A[i];
+            k *= A[i];
+            ht += 1 / A[i];
+            t2 += Math.pow(A[i], 2);
+        }
+
+        int aritmetik_ort = t1 / n;
+        int geometrik_ort = (int) Math.pow(k, (1 / n));
+        int harmonik_ort = n / ht;
+        int kontraharmonik_ort = t2 / t1;
+        System.out.println("Aritmetik Ortalama: "+aritmetik_ort);
+        System.out.println("Geometrik Ortalama: "+geometrik_ort);
+        System.out.println("Harmonik Ortalama: "+harmonik_ort);
+        System.out.println("Kontraharmonik Ortalama: "+kontraharmonik_ort);
+    }
+
+}
