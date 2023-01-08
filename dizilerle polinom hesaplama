@@ -1,0 +1,29 @@
+
+import java.util.Scanner;
+
+public class dizi_polinom {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double x;
+        double t;
+        System.out.print("Dereceyi giriniz: ");
+        int n = input.nextInt();
+        double[] A = new double[n + 1];
+
+        for (int i = 0; i <= n; i++) {
+            System.out.print("x^" + i + " nin katsayısı: ");
+            A[i] = input.nextDouble();
+        }
+        System.out.print("Hesaplanacak x değeri: ");
+        x = input.nextDouble();
+        t = A[0];
+        for (int i = 1; i <= n; i++) {
+            t += A[i] * Math.pow(x, i);
+        }
+
+        System.out.println(t);
+    }
+
+}
