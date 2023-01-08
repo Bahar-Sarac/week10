@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class dizi_skalercarpim {
+
+    public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+
+        System.out.print("Dizinin eleman sayısını giriniz: ");
+        int N = input.nextInt();
+        int[] A = new int[N];
+        int[] B = new int[N];
+        
+        System.out.println("A dizisi: ");
+        for (int i = 0; i < A.length; i++) {
+            A[i] = input.nextInt();
+        }
+        
+        System.out.println("B dizisi: ");
+        for (int j = 0; j < B.length; j++) {
+            B[j] = input.nextInt();
+        }
+
+        int sc = 0;
+        for (int i = 0; i < N; i++) {
+            sc = sc+ (A[i] * B[i]);
+
+        }
+        System.out.println("Skaler çarpım:"+sc);
+    }
+}
